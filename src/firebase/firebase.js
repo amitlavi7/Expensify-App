@@ -6,8 +6,8 @@ const firebaseConfig = {
     databaseURL: process.env.FIREBASE_AUTH_URL,
     projectId: process.env.FIREBASE_PROJECT_ID,
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
+    // appId: process.env.FIREBASE_APP_ID
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -16,7 +16,7 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, googleAuthProvider, database as default};
+export { firebase, googleAuthProvider, database as default };
 
 // //child_removed
 // database.ref('Expenses').on('child_removed', (snapshot) => {
